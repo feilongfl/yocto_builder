@@ -44,7 +44,7 @@ RUN sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/maste
 
 RUN echo "source /usr/share/powerlevel9k/powerlevel9k.zsh-theme" >> ~/.zshrc && \
     echo "source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ~/.zshrc && \
-    echo source /home/${USERNAME}/poky/oe-init-build-env >> ~/.zshrc && \
-    echo powerline-config tmux setup>> ~/.zshrc
+    echo powerline-config tmux source>> ~/.zshrc && \
+    echo source /home/${USERNAME}/poky/oe-init-build-env >> ~/.zshrc
 
 ENTRYPOINT tmux new-session -A -c /home/${USERNAME}/poky -s ${USERNAME} -n ${USERNAME} "zsh"
