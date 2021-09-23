@@ -5,7 +5,7 @@ FROM ubuntu:18.04
 # RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV TZ=Asia/China
+ENV TZ=Asia/Shanghai
 
 RUN apt-get update && apt-get -y dist-upgrade && apt-get install -y \
             gcc-multilib chrpath socat cpio python \
